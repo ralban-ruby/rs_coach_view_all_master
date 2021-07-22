@@ -2,6 +2,13 @@ connection: "elt_connector"
 
 include: "*.view"
 
+explore: totalcalls_supervisor {
+  join:  primarylink {
+    relationship: one_to_one
+    type: left_outer
+    sql_on: ${totalcalls_supervisor.employeeid} = ${primarylink.employeeid};;
+  }
+}
 explore: aht {
   join:  primarylink {
     relationship: one_to_one
