@@ -2,6 +2,13 @@ connection: "elt_connector"
 
 include: "*.view"
 
+explore: errors_for_elyse {
+  join:  primarylink {
+    relationship: one_to_one
+    type: left_outer
+    sql_on: ${errors_for_elyse.employeeid} = ${primarylink.employeeid};;
+  }
+}
 explore: acw_call {
   hidden: no
   join:  primarylink {
