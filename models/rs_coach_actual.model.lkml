@@ -3,7 +3,7 @@ connection: "elt_connector"
 include: "*.view"
 
 explore: totalcalls_supervisor {
-    access_filter: {field:primarylink.employeeid
+    access_filter: {field:totalcalls_supervisor.employeeid
     user_attribute: employee_id}
   join:  primarylink {
     relationship: one_to_one
