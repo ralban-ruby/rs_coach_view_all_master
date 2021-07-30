@@ -1,7 +1,7 @@
 view: aspect_superstate_hours {
   sql_table_name: "RS"."ASPECT_SUPERSTATE_HOURS"
     ;;
- drill_fields: [id]
+  drill_fields: [id]
 
   dimension: id {
     primary_key: yes

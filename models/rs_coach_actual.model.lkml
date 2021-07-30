@@ -2,6 +2,30 @@ connection: "elt_connector"
 
 include: "*.view"
 
+explore: totalcalls_supervisor {
+    # access_filter: {field:totalcalls_supervisor.employeeid
+    # user_attribute: employee_id}
+  join:  primarylink {
+    relationship: one_to_one
+    type: left_outer
+    sql_on: ${totalcalls_supervisor.employeeid} = ${primarylink.employeeid};;
+  }
+}
+explore: aht {
+  join:  primarylink {
+    relationship: one_to_one
+    type: left_outer
+    sql_on: ${aht.employeeid} = ${primarylink.employeeid};;
+  }
+}
+
+explore: errors_for_elyse {
+  join:  primarylink {
+    relationship: one_to_one
+    type: left_outer
+    sql_on: ${errors_for_elyse.employeeid} = ${primarylink.employeeid};;
+  }
+}
 explore: acw_call {
   hidden: no
   join:  primarylink {
@@ -20,12 +44,12 @@ explore: avail {
 }
 
 explore: seemore_rollup {
-    hidden: no
-    join: primarylink {
-      relationship: many_to_one
-      type: full_outer
-      sql_on: ${seemore_rollup.employeeid} = ${primarylink.employeeid} ;;
-    }
+  hidden: no
+  join: primarylink {
+    relationship: many_to_one
+    type: full_outer
+    sql_on: ${seemore_rollup.employeeid} = ${primarylink.employeeid} ;;
+  }
 }
 explore: brb {
   hidden: no
@@ -86,6 +110,8 @@ explore: talktime_call {
 }
 explore: topbar {
   hidden: no
+    # access_filter: {field:primarylink.team
+    # user_attribute: team_string}
   join:  primarylink {
     relationship: one_to_one
     type: left_outer
@@ -161,22 +187,6 @@ explore: attendance_occurrences {
     relationship: many_to_one
     type: full_outer
     sql_on:  ${attendance_occurrences.empid} = ${employee_lookup_all.employeeid};;
-  }
-}
-
-explore: recognitions_given {
-  join: primarylink {
-    relationship: one_to_one
-    type: left_outer
-    sql_on: ${recognitions_given.creator_emp_id} = ${primarylink.employee_code};;
-  }
-}
-
-explore: recognitions_received {
-  join: primarylink {
-    relationship: many_to_one
-    type: left_outer
-    sql_on: ${recognitions_received.recipient_emp_id} = ${primarylink.employee_code};;
   }
 }
 explore: totalseconds {hidden: no}
