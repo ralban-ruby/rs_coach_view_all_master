@@ -5,7 +5,7 @@
   elements:
   - title: Sit Withs
     name: Sit Withs
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: topbar
     type: single_value
     fields: [sum_of_sitwiths]
@@ -32,7 +32,7 @@
     height: 4
   - title: Scorecards
     name: Scorecards
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: topbar
     type: single_value
     fields: [sum_of_scorecards]
@@ -59,7 +59,7 @@
     height: 4
   - title: Average Service Quality Score
     name: Average Service Quality Score
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: topbar
     type: single_value
     fields: [sum_of_scorecards, sum_of_totalpoints]
@@ -120,7 +120,7 @@
     height: 4
   - title: Average Score
     name: Average Score
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: topbar
     type: looker_column
     fields: [topbar.name, sum_of_scorecards, sum_of_totalpoints]
@@ -180,7 +180,7 @@
     height: 9
   - title: Team Availability - Most Recent
     name: Team Availability - Most Recent
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: avail
     type: single_value
     fields: [sum_of_avail, sum_of_total]
@@ -241,7 +241,7 @@
     height: 7
   - title: Sit Withs
     name: Sit Withs (2)
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: topbar
     type: looker_column
     fields: [topbar.name, sum_of_sitwiths]
@@ -298,7 +298,7 @@
     height: 9
   - title: Availability
     name: Availability
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: avail
     type: looker_column
     fields: [primarylink.name, sum_of_avail, sum_of_total]
@@ -362,7 +362,7 @@
     height: 7
   - title: Average Handle Time
     name: Average Handle Time
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: talktime_call
     type: looker_column
     fields: [primarylink.name, sum_of_calls, sum_of_seconds]
@@ -425,7 +425,7 @@
     height: 6
   - title: After Call Work
     name: After Call Work
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: acw_call
     type: looker_column
     fields: [primarylink.name, sum_of_calls, sum_of_seconds]
@@ -486,7 +486,7 @@
     height: 6
   - title: ACW & NoACD
     name: ACW & NoACD
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: noacd_call
     type: looker_column
     fields: [primarylink.name, sum_of_calls, sum_of_seconds]
@@ -545,7 +545,7 @@
     height: 7
   - title: Be Right Back
     name: Be Right Back
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: brb
     type: looker_column
     fields: [primarylink.name, sum_of_seconds, sum_of_total]
@@ -607,7 +607,7 @@
     height: 7
   - title: Errors - Total
     name: Errors - Total
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: errors
     type: single_value
     fields: [count_of_caseid]
@@ -634,7 +634,7 @@
     height: 7
   - title: Errors
     name: Errors
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: errors
     type: looker_column
     fields: [primarylink.name, count_of_caseid]
@@ -688,7 +688,7 @@
     height: 7
   - title: Long Offers
     name: Long Offers
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: longoffers
     type: looker_column
     fields: [primarylink.name, sum_of_longoffers, sum_of_total_calls]
@@ -752,7 +752,7 @@
     height: 7
   - title: Connections - Total
     name: Connections - Total
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: connections
     type: single_value
     fields: [sum_of_total]
@@ -779,7 +779,7 @@
     height: 6
   - title: Connections
     name: Connections
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: connections
     type: looker_column
     fields: [primarylink.name, connections.type, sum_of_total]
@@ -836,7 +836,7 @@
     height: 8
   - title: Total Calls
     name: Total Calls
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: totalcalls_supervisor
     type: single_value
     fields: [sum_of_calls]
@@ -863,7 +863,7 @@
     height: 4
   - title: Calls by Day
     name: Calls by Day
-    model: master_rs_coach_dash_for_managers
+    model: rs_coach_actual_for_managers
     explore: totalcalls_supervisor
     type: looker_column
     fields: [totalcalls_supervisor.date_date, sum_of_calls]
@@ -919,32 +919,32 @@
     col: 16
     width: 8
     height: 4
-  # filters:
-  # - name: Scorecard Date
-  #   title: Scorecard Date
-  #   type: field_filter
-  #   default_value: 7 day
-  #   allow_multiple_values: true
-  #   required: false
-  #   ui_config:
-  #     type: relative_timeframes
-  #     display: inline
-  #     options: []
-  #   model: master_rs_coach_dash_for_managers
-  #   explore: topbar
-  #   listens_to_filters: []
-  #   field: topbar.scorecard_date
-  # - name: 'Supervisor '
-  #   title: 'Supervisor '
-  #   type: field_filter
-  #   default_value: ''
-  #   allow_multiple_values: true
-  #   required: false
-  #   ui_config:
-  #     type: tag_list
-  #     display: popover
-  #     options: []
-  #   model: master_rs_coach_dash_for_managers
-  #   explore: topbar
-  #   listens_to_filters: []
-  #   field: primarylink.supervisor_primary
+  filters:
+  - name: Scorecard Date
+    title: Scorecard Date
+    type: field_filter
+    default_value: 7 day
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: relative_timeframes
+      display: inline
+      options: []
+    model: rs_coach_actual_for_managers
+    explore: topbar
+    listens_to_filters: []
+    field: topbar.scorecard_date
+  - name: 'Supervisor '
+    title: 'Supervisor '
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+      options: []
+    model: rs_coach_actual_for_managers
+    explore: topbar
+    listens_to_filters: []
+    field: primarylink.supervisor_primary
