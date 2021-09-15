@@ -919,32 +919,32 @@
     col: 16
     width: 8
     height: 4
-  filters:
-  - name: Scorecard Date
-    title: Scorecard Date
-    type: field_filter
-    default_value: 7 day
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: relative_timeframes
-      display: inline
-      options: []
-    model: master_rs_coach_dash_for_managers
-    explore: topbar
-    listens_to_filters: []
-    field: topbar.scorecard_date
-  - name: 'Supervisor '
-    title: 'Supervisor '
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: tag_list
-      display: popover
-      options: []
-    model: master_rs_coach_dash_for_managers
-    explore: topbar
-    listens_to_filters: []
-    field: primarylink.supervisor_primary
+  # filters:
+  # - name: Scorecard Date
+  #   title: Scorecard Date
+  #   type: field_filter
+  #   default_value: 7 day
+  #   allow_multiple_values: true
+  #   required: false
+  #   ui_config:
+  #     type: relative_timeframes
+  #     display: inline
+  #     options: []
+  #   model: master_rs_coach_dash_for_managers
+  #   explore: topbar
+  #   listens_to_filters: []
+  #   field: topbar.scorecard_date
+  # - name: 'Supervisor '
+  #   title: 'Supervisor '
+  #   type: field_filter
+  #   default_value: ''
+  #   allow_multiple_values: true
+  #   required: false
+  #   ui_config:
+  #     type: tag_list
+  #     display: popover
+  #     options: []
+  #   model: master_rs_coach_dash_for_managers
+  #   explore: topbar
+  #   listens_to_filters: []
+  #   field: primarylink.supervisor_primary
