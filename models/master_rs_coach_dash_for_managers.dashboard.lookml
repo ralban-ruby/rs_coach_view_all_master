@@ -1,5 +1,5 @@
-- dashboard: rs_coach_dash__v0_1
-  title: RS Coach Dash - v0.1
+- dashboard: master_rs_coach_dash__v0_1
+  title: MASTER - RS Coach Dash - v0.1
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:
