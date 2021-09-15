@@ -1,6 +1,7 @@
 connection: "elt_connector"
 
 include: "*.view"
+include: "/**/*.dashboard"
 
 explore: totalcalls_supervisor {
     # access_filter: {field:totalcalls_supervisor.employeeid
