@@ -7,6 +7,11 @@ view: primarylink {
     sql: ${TABLE}."EMPLOYEE_CODE" ;;
   }
 
+  dimension: hire_date {
+    type: date
+    sql: ${TABLE}."hire_date" ;;
+  }
+
   dimension: employeeid {
     type: number
     value_format_name: id
