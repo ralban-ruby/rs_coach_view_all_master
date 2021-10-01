@@ -56,11 +56,11 @@ view: primarylink {
     type :  string
     case: {
       when: {
-        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        sql: ${TABLE}.tenure >= 0 and ${TABLE}.tenure < 60 ;;
         label: "82% or above"
       }
       when: {
-        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        sql: ${TABLE}.tenure >= 60 and ${TABLE}.tenure < 120 ;;
         label: "84% or above"
       }
       when: {
@@ -78,11 +78,11 @@ view: primarylink {
     type :  string
     case: {
       when: {
-        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        sql: ${TABLE}.tenure >= 0 and ${TABLE}.tenure < 60 ;;
         label: "35 seconds or less"
       }
       when: {
-        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        sql: ${TABLE}.tenure >= 60 and ${TABLE}.tenure < 120 ;;
         label: "30 seconds or less"
       }
       when: {
@@ -100,11 +100,11 @@ view: primarylink {
     type :  string
     case: {
       when: {
-        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        sql: ${TABLE}.tenure >= 0 and ${TABLE}.tenure < 60 ;;
         label: "42 seconds or less"
       }
       when: {
-        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        sql: ${TABLE}.tenure >= 60 and ${TABLE}.tenure < 120 ;;
         label: "38 seconds or less"
       }
       when: {
@@ -122,11 +122,11 @@ view: primarylink {
     type :  string
     case: {
       when: {
-        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        sql: ${TABLE}.tenure >= 0 and ${TABLE}.tenure < 60 ;;
         label: "42 seconds or less"
       }
       when: {
-        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        sql: ${TABLE}.tenure >= 60 and ${TABLE}.tenure < 120 ;;
         label: "38 seconds or less"
       }
       when: {
@@ -144,11 +144,11 @@ view: primarylink {
     type :  string
     case: {
       when: {
-        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        sql: ${TABLE}.tenure >= 0 and ${TABLE}.tenure < 60 ;;
         label: "85% or above"
       }
       when: {
-        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        sql: ${TABLE}.tenure >= 60 and ${TABLE}.tenure < 120 ;;
         label: "87% or above"
       }
       when: {
