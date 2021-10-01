@@ -12,6 +12,20 @@ view: primarylink {
     sql: ${TABLE}."hire_date" ;;
   }
 
+  dimension: tenure {
+    type: number
+    sql: ${TABLE}."tenure" ;;
+  }
+
+  dimension: tenure_tier {
+    group_label: "Tenure"
+    label: "By Tier"
+    style: integer
+    type: tier
+    tiers: [0,60,120]
+    sql: ${TABLE}."TENURE" ;;
+  }
+
   dimension: employeeid {
     type: number
     value_format_name: id
