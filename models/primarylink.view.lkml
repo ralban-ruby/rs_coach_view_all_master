@@ -52,6 +52,117 @@ view: primarylink {
     sql: ${TABLE}."TITLE" ;;
   }
 
+  dimension: Avail_goal {
+    type :  string
+    case: {
+      when: {
+        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        label: "82% or above"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        label: "84% or above"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 120 ;;
+        label: "86% or above"
+      }
+      when: {
+        sql: ${TABLE}.tenure < 0 ;;
+        label: "NA"
+      }
+    }
+  }
+
+  dimension: ACW_goal {
+    type :  string
+    case: {
+      when: {
+        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        label: "35 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        label: "30 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 120 ;;
+        label: "25 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure < 0 ;;
+        label: "NA"
+      }
+    }
+  }
+
+  dimension: First_Response_time_goal {
+    type :  string
+    case: {
+      when: {
+        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        label: "42 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        label: "38 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 120 ;;
+        label: "35 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure < 0 ;;
+        label: "NA"
+      }
+    }
+  }
+
+  dimension: Avg_Response_time_goal {
+    type :  string
+    case: {
+      when: {
+        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        label: "42 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        label: "38 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 120 ;;
+        label: "35 seconds or less"
+      }
+      when: {
+        sql: ${TABLE}.tenure < 0 ;;
+        label: "NA"
+      }
+    }
+  }
+
+  dimension: SQR_goal {
+    type :  string
+    case: {
+      when: {
+        sql: ${TABLE}.tenure >= 0 and < 60 ;;
+        label: "85% or above"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 60 and < 120 ;;
+        label: "87% or above"
+      }
+      when: {
+        sql: ${TABLE}.tenure >= 120 ;;
+        label: "90% or above"
+      }
+      when: {
+        sql: ${TABLE}.tenure < 0 ;;
+        label: "NA"
+      }
+    }
+  }
+
+
   measure: count {
     type: count
     drill_fields: [name]
