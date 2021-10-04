@@ -96,50 +96,6 @@ view: primarylink {
     }
   }
 
-  dimension: First_Response_time_goal {
-    type :  string
-    case: {
-      when: {
-        sql: ${TABLE}.tenure >= 0 and ${TABLE}.tenure < 60 ;;
-        label: "42 seconds or less"
-      }
-      when: {
-        sql: ${TABLE}.tenure >= 60 and ${TABLE}.tenure < 120 ;;
-        label: "38 seconds or less"
-      }
-      when: {
-        sql: ${TABLE}.tenure >= 120 ;;
-        label: "35 seconds or less"
-      }
-      when: {
-        sql: ${TABLE}.tenure < 0 ;;
-        label: "NA"
-      }
-    }
-  }
-
-  dimension: Avg_Response_time_goal {
-    type :  string
-    case: {
-      when: {
-        sql: ${TABLE}.tenure >= 0 and ${TABLE}.tenure < 60 ;;
-        label: "42 seconds or less"
-      }
-      when: {
-        sql: ${TABLE}.tenure >= 60 and ${TABLE}.tenure < 120 ;;
-        label: "38 seconds or less"
-      }
-      when: {
-        sql: ${TABLE}.tenure >= 120 ;;
-        label: "35 seconds or less"
-      }
-      when: {
-        sql: ${TABLE}.tenure < 0 ;;
-        label: "NA"
-      }
-    }
-  }
-
   dimension: SQR_goal {
     type :  string
     case: {
