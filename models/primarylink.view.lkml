@@ -118,6 +118,23 @@ view: primarylink {
     }
   }
 
+  dimension: ROS_test_team {
+    type :  string
+    case: {
+      when: {
+        sql: ${TABLE}.name IN ('Chris Page','Angelica Thomas','Hailey Fuller')  ;;
+        label: "Alpha"
+      }
+      when: {
+        sql: ${TABLE}.name IN ('Amy Gray','Anthony Contreras','Cameron Esch','Charles Williams',
+                                'Crystal Castro','Jenn Schaaf','Jodie Hess', 'Karrie Elkins', 'Katy Aman',
+                                'Keri Stewart','Lauren Phillips','Maria Guzman','Marissa Hunt','Mellissa Dowd',
+                                'Mercedes Alvarado','Neena Nuhring','Rachel Rhodus','Sharene Neidig','Zach Duling','Zach Kramberg');;
+        label: "Beta"
+      }
+      }
+    }
+
 
   measure: count {
     type: count
