@@ -84,6 +84,14 @@ explore: longoffers {
     sql_on: ${longoffers.employeeid} = ${primarylink.employeeid};;
   }
 }
+explore: rs_recap_longoffer_ana_data {
+  hidden: no
+  join:  primarylink {
+    relationship: one_to_one
+    type: full_outer
+    sql_on: ${rs_recap_longoffer_ana_data.employeeid} = ${primarylink.employeeid};;
+  }
+}
 explore: noacd_call {
   hidden: no
   join:  primarylink {
