@@ -206,3 +206,5 @@ datagroup: rs_coach_default_datagroup {
 }
 
 persist_with: rs_coach_default_datagroup
+
+explore: wrap_up_code_report {}
