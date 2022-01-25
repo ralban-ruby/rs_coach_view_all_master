@@ -3,6 +3,8 @@ connection: "elt_connector"
 include: "*.view"
 #include: "/**/*.dashboard"
 
+explore: wrapup_code {}
+
 explore: totalcalls_supervisor {
     # access_filter: {field:totalcalls_supervisor.employeeid
     # user_attribute: employee_id}
